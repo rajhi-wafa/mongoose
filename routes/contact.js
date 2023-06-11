@@ -24,7 +24,7 @@ router.get('/test',(req,res)=>{
     //delet contact
     router.delete("deleteContact/:id",(req,res)=>{
     const {_id}=req.parames
-    contact.findoneAndDelete({_id})
+    Contact.findoneAndDelete({_id})
     .then(contacts=>res.send(contacts))
     .catch(err=>console.log(err))
 })
